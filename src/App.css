@@ -21,7 +21,6 @@ body {
     border: 0.5px solid var(--border);
     width: 90%;
     padding: 20px;
-    height: 234px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     margin: auto;
@@ -50,15 +49,19 @@ button {
     padding-bottom: 20px;
 }
 
-.menu h1 {
+.menu h1,
+h4 {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    padding: 53px;
+    padding: 10px;
     align-items: center !important;
 }
 img {
     padding: 15px;
+}
+.close__menu__text {
+    color: var(--border);
 }
 @media only screen and (min-device-width: 300px) and (max-device-width: 460px) {
     h1 {
@@ -66,5 +69,8 @@ img {
     }
     img {
         padding: 2px;
+    }
+    .menu__container img {
+        max-width: 80px;
     }
 }

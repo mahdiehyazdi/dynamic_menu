@@ -2,20 +2,20 @@ import React, { useState } from "react";
 const tabData = [
     {
         id: 1,
-        title: "ITEM 1",
-        content: "Authorize the user data",
+        title: "level 1",
+        content: "Planning your goal: Note your plans in a notebook",
         icon: "/Svg/Item1.svg",
     },
     {
         id: 2,
-        title: "ITEM 2",
-        content: "Redirect user to cart page",
+        title: "Level 2",
+        content: "Do your planes: I know it's difficult but continue",
         icon: "/Svg/Item2.svg",
     },
     {
         id: 3,
-        title: "ITEM 3",
-        content: "Create new payment for the user",
+        title: "Final",
+        content: "You have earned your goal: congrats :))",
         icon: "/Svg/Item3.svg",
     },
 ];
@@ -38,12 +38,16 @@ export default function Menu() {
                         ))}
                     </div>
                     <h1>
-                        {tabData[activeTab - 1].content}
+                        {tabData[activeTab - 1].content.split(":")[0]} <br />
                         <img src={tabData[activeTab - 1].icon} />
                     </h1>
+                    <h4>my suggestion : {tabData[activeTab - 1].content.split(":").splice(1, 2)}</h4>
                 </div>
             ) : (
-                <p>open the menu</p>
+                <div>
+                    <p>if you have a small goal open the menu :)</p>
+                    <span className="close__menu__text">Read my suggestion roadmap</span>
+                </div>
             )}
         </div>
     );
